@@ -234,11 +234,11 @@ def main():
     while restart.lower() == 'yes' or restart.lower() == 'y': # conditional statement to start execution
         city, month, day = get_filters()    # function is called and returned values are assigned to variables
         df = load_data(city, month, day)     # function is called and returned value is assigned to variable
-        time_stats(df,month,day)             # function called
+        time_stats(df,month,day)             # function called with three arguments
         station_stats(df)                    # function called
         trip_duration_stats(df)              # function called
-        user_stats(df,city)                  # function called
-        raw_data(df,city)                         # function called
+        user_stats(df,city)                  # function called with two argumnets
+        raw_data(df,city)                    # function called with two argumnets
         restart = input('\nWould you like to restart? Enter yes or no.\n')
        
 if __name__ == '__main__':
