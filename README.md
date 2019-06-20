@@ -11,8 +11,13 @@ program in order to successfully fetch data from the data base.It provides the s
 using this rental bike facility in different cities.Some modules are also imported in the program that demonstrate how powerful Python is.
 
 ### Files used
-Include the files used
+chicago.csv, new_york_city.csv, washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Helpfull links for pandas  --> https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
+			       https://devdocs.io/numpy~1.14-mathematical-functions/
+			      
+Helpfull links for Git --> https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository
+			  https://git-scm.com/docs/git-diff#git-diff--w
+			  https://git-scm.com/docs/git-branch
+			  https://git-scm.com/book/en/v2/Git-Basics-Tagging
