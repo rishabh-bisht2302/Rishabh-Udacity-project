@@ -222,8 +222,7 @@ def raw_data(df,city):
             user['Gender'] = df['Gender'][i]
             user['Birth Year'] = df['Birth Year'][i]
         # prints information for each raw in the frame as a dictionary
-        for key,value in user.items():  
-            print('{} : {}'.format(key,value))
+        print(user)
         response = input('\nDo you want to print individual data ? Enter yes or no : ')
         i += 1
     return
