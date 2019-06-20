@@ -9,6 +9,8 @@ def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
 
+    Input: Function takes nothing and returns a tuple.
+
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -17,7 +19,7 @@ def get_filters():
 
     # Asks the user to enter the name of city for which they want to explore the data.
     # A while loop is used to make sure that the cityname entered is correct and if not,user is asked again to enter the correct city name.
-    # An emoji is also used.
+    # An emoji is also used source for which is provided at top.
     city_name = input('Enter the city name to start exploring(CHICAGO / WASHINGTON / NEW YORK CITY) : ')
     while city_name.lower() not in ('chicago','washington','new york city'):
         city_name = input('OOPS..!!\U0001F605   Please type CITY NAME from (CHICAGO / WASHINGTON / NEW YORK CITY)..!! Lets start again.')
