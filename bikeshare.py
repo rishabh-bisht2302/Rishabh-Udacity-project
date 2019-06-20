@@ -27,7 +27,7 @@ def get_filters():
     # Asks the user to enter the month of year for which they want to explore the data.
     # A while loop is used to make sure that the month name entered is correct and if not,user is asked again to enter the correct month name. 
     month_name = input('looking for a particular month or for all months,type(\'all\') ? Enter the name of month or type \'all\' for no filter(in words) : ')
-    while month_name.lower() not in ('january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'all'):
+    while month_name.lower() not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
         month_name = input('OOPS..!!\U0001F605   Please type correct MONTH NAME..!! Enter again.')
             
     # Asks the user to enter the month of year for which they want to explore the data.
@@ -52,7 +52,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     # Converting the name of month to respective integer representation.
-    date = {'januray':1,'february':2,'march':3,'april':4,'may':5,'june':6,'july':7,'august':8,'september':9,'october':10,'november':11,'december':12}
+    date = {'januray':1,'february':2,'march':3,'april':4,'may':5,'june':6}
     for key,value in date.items():
         if key == month.lower():
             req_month = value
@@ -95,7 +95,7 @@ def time_stats(df,month,day):
         most_pop_month = df['Month'].mode()[0]
 
         # Converting the integer representation of month to respective name of month
-        date = np.array(['Januray','February','March','April','May','June','July','August','September','October','November','December'])
+        date = np.array(['Januray','February','March','April','May','June'])
         most_pop_month_new = date[most_pop_month-1]
         print('Most popular month :',most_pop_month_new,'\tcount :',most_pop_month_count)
 
@@ -234,11 +234,11 @@ def main():
     while restart.lower() == 'yes' or restart.lower() == 'y': # conditional statement to start execution
         city, month, day = get_filters()    # function is called and returned values are assigned to variables
         df = load_data(city, month, day)     # function is called and returned value is assigned to variable
-        time_stats(df,month,day)             # function called
+        time_stats(df,month,day)             # function called with three arguments
         station_stats(df)                    # function called
         trip_duration_stats(df)              # function called
-        user_stats(df,city)                  # function called
-        raw_data(df,city)                         # function called
+        user_stats(df,city)                  # function called with two argumnets
+        raw_data(df,city)                    # function called with two argumnets
         restart = input('\nWould you like to restart? Enter yes or no.\n')
        
 if __name__ == '__main__':
