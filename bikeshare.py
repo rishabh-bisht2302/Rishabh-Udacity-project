@@ -185,7 +185,7 @@ def user_stats(df,city):
     
     # Conditional statement to check if the city entered by user is 'washington'.If yes,then it displays no data as the columns dont exist          in washingtons csv file.If not,then it displays the result.
     if city == 'washington':
-        print('No Gender and Bith year info to display')
+        print('Sorry..!!There is no Birth year and Gender information for Washington city')
     else:
         # Counts number of rows for each unique value in 'Gender' column and prints each type along with its count in this column.
         gender = df['Gender'].value_counts()
